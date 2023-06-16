@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+     function getComputerChoice(arr){
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        const item = arr[randomIndex];
+        return item;
+     }
+     const array = ['rock', 'paper', 'scissors'];
+     const result = getComputerChoice(array);
+     //console.log(result);//
+
+     function playRound(playerSelection, computerSelection){
+        if(playerSelection===computerSelection)
+        console.log("Tie");
+        else if(playerSelection==="rock" && computerSelection==="paper"){
+        return "You Lost!";}
+        else if(playerSelection==="rock" && computerSelection==="scissors"){
+        return "You Won!";}
+        else if(playerSelection==="scissors" && computerSelection==="paper"){
+        return "You Won!";}
+        else if(playerSelection==="scissors" && computerSelection==="rock"){
+        return "You Lost";}
+        else if(playerSelection==="paper" && computerSelection==="rock"){
+        return "You Won";}
+        else if(playerSelection==="paper" && computerSelection==="scissors"){
+        return "You lost"}
+         }
+
+     const playerSelection = prompt("your choice here");
+     const computerSelection = result;
+     //console.log(playRound(playerSelection, computerSelection));//
+
+     function game(){
+      let round = 1;
+      console.log(round);
+      playRound()
+
+        
+     }
+     game();
+
+     
+
+   
+
+   //create a function that randomly selects from three choices: Rock, Paper or Scissors//
+   //create a function that accepts user input from a prompt in the form of Rock Paper or Scissors//
+   //create a function that compares the two inputs, from the computer and from the user and declare a winner based on the rules of the game//
+
+
+   //rock beats scissors loses to paper//
+   //scissors beats paper loses to rock//
+   //paper beats rock loses to scissors//
+
+</script>
+    
+</body>
+</html>
